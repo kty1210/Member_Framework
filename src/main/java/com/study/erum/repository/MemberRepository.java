@@ -2,46 +2,22 @@ package com.study.erum.repository;
 
 import java.util.List;
 
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.stereotype.Repository;
-
 import com.study.erum.dto.MemberDTO;
 
-import lombok.RequiredArgsConstructor;
+public interface MemberRepository {
 
-@Repository
-@RequiredArgsConstructor
-public class MemberRepository {
-	
-	//MyBatis 연동 DB 연산
-	private final SqlSessionTemplate sql;
 
-	public int save(MemberDTO memberDTO) {
-	    System.out.println("memberDTO = " + memberDTO);
-	    return sql.insert("Member.save", memberDTO);
-	}
+	public int save(MemberDTO memberDTO);
 
-	public MemberDTO login(MemberDTO memberDTO) {
-	    return sql.selectOne("Member.login", memberDTO);
-	}
+	public MemberDTO login(MemberDTO memberDTO);
 
-	public List<MemberDTO> findAll() {
-	    return sql.selectList("Member.findAll");
-	  }
+	public List<MemberDTO> findAll();
 
-	public MemberDTO findById(Long id) {
-	    return sql.selectOne("Member.findById", id);
-	  }
+	public MemberDTO findById(Long id);
 
-	public void delete(Long id) {
-	    sql.delete("Member.delete", id);
-	  }
+	public void delete(Long id);
 
-	public MemberDTO findByMemberEmail(String loginEmail) {
-	    return sql.selectOne("Member.findByMemberEmail", loginEmail);
-	  }
+	public MemberDTO findByMemberEmail(String loginEmail);
 
-	public int update(MemberDTO memberDTO) {
-	    return sql.update("Member.update", memberDTO);
-	  }
+	public int update(MemberDTO memberDTO);
 }
