@@ -1,5 +1,7 @@
 package com.study.erum.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -32,4 +34,24 @@ public class MemberController {
       return "save";
     }
   }
+  
+  @GetMapping("/login")
+  public String loginForm() {
+	return "login";  
+  }
+  	
+  
+  @PostMapping("/login")
+  //@ModelAttribute는 전송된 데이터를 객체로 변환해서 매개변수로 사용할수있게 만들어줌
+  //HttpSession은 Session역할
+  public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session){
+    boolean loginResult = memberService.login(memberDTO);
+    if(loginResult){
+      session.setAttribute("loginEmail", memberDTO.getMemberEmail());
+      return "main";
+    }else{
+      return "login";
+    }
+  }
+  
 }
