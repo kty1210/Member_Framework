@@ -73,4 +73,29 @@ public class MemberController {
     return "detail";
   }
   
+  
+  @GetMapping("/delete")
+  public String delete(@RequestParam("id") Long id){
+    memberService.delete(id);
+    return "redirect:/member/";
+  }
+  
+  @GetMapping("/update")
+  public String updateFrom(HttpSession session, Model model){
+    //세션에 저장된 나의 이메일 가져오기
+    String loginEmail = (String) session.getAttribute("loginEmail");
+    MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
+    model.addAttribute("member", memberDTO);
+    return "update";
+  }
+  
+  @PostMapping("/update")
+  public String update(@ModelAttribute MemberDTO memberDTO){
+    boolean result = memberService.update(memberDTO);
+    if(result){
+      return "redirect:/member?id=" + memberDTO.getId();
+    }else{
+      return "index";
+    }
+  }
 }
