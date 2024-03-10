@@ -7,10 +7,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.study.erum.dto.MemberDTO;
+import com.study.erum.service.MemberService;
+
+import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequestMapping("/member")
+@RequiredArgsConstructor
 public class MemberController {
+	
+  private final MemberService memberService;
 
   @GetMapping("/save")
   public String saveForm(){
