@@ -23,18 +23,8 @@ CRUD를 이용한 회원관리 게시판
 <br/>
 <br/>
 
-추가된 라이브러리
-<br/>
 
-* lombok
-* H2
-* JUnit
-* MyBatis
-* HikariCP
-* log4j2
 
-<br/>
-<br/>
 
 구현 메소드
 <br/>
@@ -47,7 +37,18 @@ CRUD를 이용한 회원관리 게시판
 * update : 회원정보 수정
 
 
+<br/>
+<br/>
 
+추가된 라이브러리
+<br/>
+
+* lombok
+* H2
+* JUnit
+* MyBatis
+* HikariCP
+* log4j2
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
