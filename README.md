@@ -20,6 +20,14 @@
 CRUD를 이용한 회원관리 게시판
 <br/>
 
+추가된 라이브러리
+
+* lombok
+* H2
+* JUnit
+* MyBatis
+* HikariCP
+* log4j2
 
 <br/>
 <br/>
