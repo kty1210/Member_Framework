@@ -18,29 +18,39 @@
 
 
 CRUD를 이용한 회원관리 게시판
-<br/>
 
 <br/>
+
+회원제 사이트에서 요구하는 로그인과 관련된 기능들을 구현
+
+<br/>
+
+Ajax를 사용해 중복 이메일 체크
+
+<br/>
+<br/>
+<br/>
 <br/>
 
 
 
 
-구현 메소드
+#### 구현 메소드
 <br/>
 
 * save : 회원가입
 * login : 로그인 
 * findAll : 전체 회원 조회
-* findById : 특정 회원 조
+* findById : 특정 회원 조회
 * delete : 회원 삭제
 * update : 회원정보 수정
+* logout : 로그아웃
 
 
 <br/>
 <br/>
 
-추가된 라이브러리
+#### 추가된 라이브러리
 <br/>
 
 * lombok
@@ -48,6 +58,11 @@ CRUD를 이용한 회원관리 게시판
 * MyBatis
 * HikariCP
 * log4j2
+
+
+<br/>
+<br/>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
