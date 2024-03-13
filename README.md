@@ -47,6 +47,14 @@ CRUD를 이용한 회원관리 게시판
 <!-- 기술스택 -->
 ## 기술스택
 
+
+
+
+* <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
+* <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+* <img src="https://img.shields.io/badge/openjdk-000000?style=for-the-badge&logo=openjdk&logoColor=white">
+* <img src="https://img.shields.io/badge/apachetomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <br/>
